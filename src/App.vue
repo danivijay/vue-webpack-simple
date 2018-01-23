@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <global-component />
-    <local-comp />
+    <global-component :cars="cars" />
+    <local-comp :cars="cars" />
   </div>
 </template>
 
@@ -14,12 +14,12 @@ export default {
   },
   data () {
     return {
-      title: 'Component Demo'
-    }
-  },
-  methods: {
-    greetMe () {
-      return 'this is some Vueeeee!!'
+      title: 'Component Demo',
+      cars: [
+        { name: 'hyundai', country: 'korea' },
+        { name: 'audi', country: 'germany' },
+        { name: 'bmw', country: 'germany' }
+      ]
     }
   }
 }
