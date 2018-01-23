@@ -1,15 +1,20 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <p>{{ greetMe() }}</p>
+    <global-component />
+    <local-comp />
   </div>
 </template>
 
 <script>
+import LocalComponent from './LocalComponent.vue'
 export default {
+  components: {
+    'local-comp': LocalComponent
+  },
   data () {
     return {
-      title: 'Welcome to Vue'
+      title: 'Component Demo'
     }
   },
   methods: {
