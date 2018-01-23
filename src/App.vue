@@ -2,7 +2,7 @@
   <div>
     <h1>{{ title }}</h1>
     <global-component :cars="cars" :name="name" />
-    <local-comp :cars="cars" :name="name" />
+    <local-comp :cars="cars" :name="name" @changeName="updateName($event)" />
   </div>
 </template>
 
@@ -21,6 +21,11 @@ export default {
         { name: 'audi', country: 'germany' },
         { name: 'bmw', country: 'germany' }
       ]
+    }
+  },
+  methods: {
+    updateName (newName) {
+      this.name = newName
     }
   }
 }
