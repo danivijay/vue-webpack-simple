@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import GlobalComponent from './GlobalComponent.vue'
+import GlobalComponent from './components/GlobalComponent.vue'
 
 export const bus = new Vue()
 
