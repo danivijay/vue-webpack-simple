@@ -33,7 +33,6 @@ export default {
     }
   },
   created () {
-    console.log('bus', bus)
     bus.$on('nameChanged', (data) => {
       this.name = data
     })

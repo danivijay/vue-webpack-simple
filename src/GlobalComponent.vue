@@ -37,6 +37,24 @@ export default {
       this.name = 'The Tech Club'
       bus.$emit('nameChanged', 'The Tech Club')
     }
+  },
+  beforeCreate () {
+    alert('beforeCreate')
+  },
+  created () {
+    alert('created')
+  },
+  beforeMount () {
+    alert('beforeMount')
+  },
+  mounted () {
+    alert('mounted')
+  },
+  beforeUpdate () {
+    alert('beforeUpdate')
+  },
+  updated () {
+    alert('updated')
   }
 }
 </script>
